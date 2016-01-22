@@ -24,10 +24,10 @@
     },
 
     invalid: function (view, attr, error) {
-      // get input field 
+      // get input field
       var $input = this.getInput(view, attr);
       // get label for input field
-      var $label = $("label[for='" + $($input).attr('id') + "']");
+      var $label = $('label[for="' + $($input).attr('id') + '"]');
 
       $label.addClass('warning-label');
       $input.addClass('warning');

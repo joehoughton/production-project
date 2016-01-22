@@ -33,7 +33,7 @@
         model: this.model
       });
 
-      this.model.fetch({ silent: true }).success(function () {
+      this.model.fetch({silent: true}).success(function () {
         var sidebarView = new SidebarView({
           active: 'organisation'
         });

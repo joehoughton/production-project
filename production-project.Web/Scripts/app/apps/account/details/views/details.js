@@ -58,7 +58,6 @@
           Backbone.Radio.channel('alert').trigger('warning', 'Server failed to update user details');
         }
       });
-
     }
   });
 });

@@ -20,9 +20,8 @@
 
       password: {
         required: true
-      } 
+      }
     }
 
   });
-
 });

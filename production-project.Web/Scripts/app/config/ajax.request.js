@@ -13,18 +13,16 @@
     var statusCode = xhr.status;
 
     if (statusCode === 401 || statusCode === 403) {
-      Backbone.history.navigate('login', {trigger: true}); 
+      Backbone.history.navigate('login', {trigger: true});
       alertChannel.trigger('error', 'Unauthorised Access');
     }
 
     if (statusCode === 400) {
-      var responseText = ($.parseJSON(xhr.responseText)); 
       alertChannel.trigger('error', 'Unauthorised Access');
     }
 
     if (statusCode >= 500) {
       alertChannel.trigger('error', 'The server is not responding');
     }
-
   });
 });

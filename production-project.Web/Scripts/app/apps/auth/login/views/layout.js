@@ -34,14 +34,13 @@
         success: function (response) {
           // store the returned bearer token in a cookie - set expiry to one day
           var accessToken = response.attributes.access_token;
-          $.cookie("accessToken", accessToken, { expires: 1 });
+          $.cookie('accessToken', accessToken, {expires: 1});
 
-          Backbone.history.navigate('/account/organisation', { trigger: true });
+          Backbone.history.navigate('/account/organisation', {trigger: true});
         }
       });
     }
 
   });
 });
-
 

@@ -1,8 +1,9 @@
 ﻿define([
+  'jquery',
   'Marionette',
   'apps/alert/show/models/alert',
   'apps/alert/show/views/alert'
-], function (Marionette, Error, ErrorView) {
+], function ($, Marionette, Error, ErrorView) {
   'use strict';
 
   return Marionette.Object.extend({
@@ -12,7 +13,7 @@
       this.fillRegions();
     },
 
-    fillRegions: function () {  
+    fillRegions: function () {
       this.show();
     },
 
@@ -23,11 +24,11 @@
         model: alert
       });
 
-      if ($("#error-content").is(':empty')) {
+      if ($('#error-content').is(':empty')) {
         this.region.show(errorView);
       } else {
         errorView.render();
-        $("#error-content").append(errorView.$el.html());
+        $('#error-content').append(errorView.$el.html());
       }
     }
   });

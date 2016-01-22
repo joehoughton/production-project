@@ -7,5 +7,4 @@
   return Backbone.Model.extend({
     urlRoot: '/api/users/current/organisation'
   });
-
 });

@@ -9,7 +9,7 @@
   'use strict';
 
   return Marionette.LayoutView.extend({
-    initialize: function (options) { },
+    initialize: function () { },
 
     className: 'details-view',
 

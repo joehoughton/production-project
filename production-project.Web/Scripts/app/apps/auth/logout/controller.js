@@ -12,7 +12,7 @@
 
     logout: function () {
       // delete cookie holding bearer token
-      $.removeCookie("accessToken");
+      $.removeCookie('accessToken');
 
       // clear previous error messages
       $('#error-content').empty();
