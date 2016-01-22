@@ -56,5 +56,5 @@
     "requireSpaceBetweenArguments": true,
     "safeContextKeyword": ["that"],
     "validateIndentation": 2,
-    "excludeFiles": ["proof-of-concept-spa.Web/Scripts/lib/**"]
+    "excludeFiles": ["production-project.Web/Scripts/lib/**"]
 }

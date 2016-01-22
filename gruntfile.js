@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 				},
 			dist: {
 				files: { // set directory for compiled css
-					'proof-of-concept-spa.Web/Scripts/css/site.css': 'proof-of-concept-spa.Web/Scripts/css/site.scss'
+					'production-project.Web/Scripts/css/site.css': 'production-project.Web/Scripts/css/site.scss'
 				}
 			},
 			dev: {
@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 					sourcemap: 'none'
 				},
 				files: {
-					'proof-of-concept-spa.Web/Scripts/css/site.css': 'proof-of-concept-spa.Web/Scripts/css/site.scss'
+					'production-project.Web/Scripts/css/site.css': 'production-project.Web/Scripts/css/site.scss'
 				}
 			}
 		},
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 				tasks: ['sass']
 			},
 			 scripts: {
-				files: ['proof-of-concept-spa.Web/Scripts/app/**/*.js', 'proof-of-concept-spa.Web/Scripts/plugins/**/*.js'],
+				files: ['production-project.Web/Scripts/app/**/*.js', 'production-project.Web/Scripts/plugins/**/*.js'],
 				tasks: ['jshint:dev', 'jscs:dev'],
 				options: {
 				spawn: false // speeds up the reaction time of the watch
@@ -40,24 +40,24 @@ module.exports = function(grunt) {
 			  jshintrc: '.jshintrc',
 			  reporter: require('jshint-stylish'),
 			  force: false,
-			  ignores: ['proof-of-concept-spa.Web/Scripts/lib/**']
+			  ignores: ['production-project.Web/Scripts/lib/**']
 			},
-			src: ['proof-of-concept-spa.Web/Scripts/**/*.js'],
+			src: ['production-project.Web/Scripts/**/*.js'],
 		  },
 		  dev: {
 			options: {
 			  jshintrc: '.jshintrc',
 			  reporter: require('jshint-stylish'),
 			  force: true,
-			  ignores: ['proof-of-concept-spa.Web/Scripts/lib/**']
+			  ignores: ['production-project.Web/Scripts/lib/**']
 			},
-			src: ['proof-of-concept-spa.Web/Scripts/**/*.js'],
+			src: ['production-project.Web/Scripts/**/*.js'],
 		  }
 		},
 
 		jscs: {
 		  dist: {
-			src: 'proof-of-concept-spa.Web/Scripts/**/*.js',
+			src: 'production-project.Web/Scripts/**/*.js',
 			options: {
 			  config: '.jscsrc',
 			  verbose: true,
@@ -66,7 +66,7 @@ module.exports = function(grunt) {
 			}
 		  },
 		  dev: {
-			src: 'proof-of-concept-spa.Web/Scripts/**/*.js',
+			src: 'production-project.Web/Scripts/**/*.js',
 			options: {
 			  config: '.jscsrc',
 			  verbose: true,
