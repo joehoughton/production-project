@@ -25,13 +25,63 @@ module.exports = function(grunt) {
 			css: {
 				files: '**/*.scss', // watch all .scss files
 				tasks: ['sass']
+			},
+			 scripts: {
+				files: ['proof-of-concept-spa.Web/Scripts/app/**/*.js', 'proof-of-concept-spa.Web/Scripts/plugins/**/*.js'],
+				tasks: ['jshint:dev', 'jscs:dev'],
+				options: {
+				spawn: false // speeds up the reaction time of the watch
+			  }
+			},
+		},
+		jshint: {
+		  dist: {
+			options: {
+			  jshintrc: '.jshintrc',
+			  reporter: require('jshint-stylish'),
+			  force: false,
+			  ignores: ['proof-of-concept-spa.Web/Scripts/lib/**']
+			},
+			src: ['proof-of-concept-spa.Web/Scripts/**/*.js'],
+		  },
+		  dev: {
+			options: {
+			  jshintrc: '.jshintrc',
+			  reporter: require('jshint-stylish'),
+			  force: true,
+			  ignores: ['proof-of-concept-spa.Web/Scripts/lib/**']
+			},
+			src: ['proof-of-concept-spa.Web/Scripts/**/*.js'],
+		  }
+		},
+
+		jscs: {
+		  dist: {
+			src: 'proof-of-concept-spa.Web/Scripts/**/*.js',
+			options: {
+			  config: '.jscsrc',
+			  verbose: true,
+			  force: false,
+			  reporter: require('jscs-stylish').path
 			}
-		}
+		  },
+		  dev: {
+			src: 'proof-of-concept-spa.Web/Scripts/**/*.js',
+			options: {
+			  config: '.jscsrc',
+			  verbose: true,
+			  force: true,
+			  reporter: require('jscs-stylish').path
+			}
+		  }
+		},
 	});
 	
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-jscs');
 	
-	grunt.registerTask('build', ['sass:dist']); // run grunt build from command line
-	grunt.registerTask('default',['sass:dev', 'watch']); // run grunt from command line
+	grunt.registerTask('build', ['sass:dist','jshint:dist', 'jscs:dist']); // run grunt build from command line - production
+	grunt.registerTask('default',['sass:dev', 'watch', 'jshint:dev', 'jscs:dev']); // run grunt from command line - development
 };

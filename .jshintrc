@@ -1,0 +1,17 @@
+{
+  "undef": true,
+  "unused": true,
+  "eqeqeq": true,
+  "curly": true,
+  "freeze": true,
+  "strict": true,
+  "browser": true,
+  "futurehostile": true,
+  "noarg": true,
+  "nonew": true,
+  "notypeof": true,
+  "predef": [
+    "require",
+    "define"
+  ]
+}
