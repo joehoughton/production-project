@@ -510,6 +510,7 @@
     <Content Include="Scripts\lib\bower_components\underscore\README.md" />
     <Content Include="Scripts\lib\bower_components\underscore\underscore-min.map" />
     <Content Include="Scripts\css\font-awesome.css.map" />
+    <Content Include="Scripts\css\site.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
