@@ -13,8 +13,13 @@
                    .WithParameter("connectionString", ConfigurationManager.ConnectionStrings["Sparebeds"].ConnectionString)
                    .InstancePerLifetimeScope();
 
-            builder.RegisterAssemblyTypes(this.ThisAssembly)
+            builder.RegisterAssemblyTypes(ThisAssembly)
                    .Where(t => t.Name.EndsWith("Repository"))
+                   .AsImplementedInterfaces()
+                   .InstancePerLifetimeScope();
+
+            builder.RegisterAssemblyTypes(ThisAssembly)
+                   .Where(t => t.Name.EndsWith("Validator"))
                    .AsImplementedInterfaces()
                    .InstancePerLifetimeScope();
 

@@ -1,8 +1,7 @@
 ﻿define([
   'jquery',
   'backbone',
-  'backbone.radio',
-  'jquery.cookie'
+  'backbone.radio'
 ], function ($, Backbone, Radio) {
   'use strict';
 

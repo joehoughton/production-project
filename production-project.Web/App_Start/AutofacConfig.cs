@@ -2,11 +2,9 @@
 {
     using System.Reflection;
     using System.Web.Http;
-
     using global::Autofac;
     using global::Autofac.Features.ResolveAnything;
     using global::Autofac.Integration.WebApi;
-
     using production_project.Domain.Autofac;
     using production_project.Web.Autofac;
 

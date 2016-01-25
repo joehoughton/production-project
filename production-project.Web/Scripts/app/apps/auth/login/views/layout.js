@@ -3,9 +3,8 @@
   'backbone',
   'backbone.radio',
   'Marionette',
-  'jquery.cookie',
   'hbs!../templates/view'
-], function ($, Backbone, Radio, Marionette, cookie, loginTemplate) {
+], function ($, Backbone, Radio, Marionette, loginTemplate) {
   'use strict';
 
   return Marionette.LayoutView.extend({
@@ -31,11 +30,7 @@
       });
 
       this.model.save(null, {
-        success: function (response) {
-          // store the returned bearer token in a cookie - set expiry to one day
-          var accessToken = response.attributes.access_token;
-          $.cookie('accessToken', accessToken, {expires: 1});
-
+        success: function () {
           Backbone.history.navigate('/account/organisation', {trigger: true});
         }
       });

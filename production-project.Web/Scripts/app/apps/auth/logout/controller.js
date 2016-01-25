@@ -11,13 +11,11 @@
     },
 
     logout: function () {
-      // delete cookie holding bearer token
-      $.removeCookie('accessToken');
+      $.ajax({
+        type: 'DELETE',
+        url: 'api/tokens'
+      });
 
-      // clear previous error messages
-      $('#error-content').empty();
-
-      // redirect to login view
       Backbone.history.navigate('login', {trigger: true});
     }
   });

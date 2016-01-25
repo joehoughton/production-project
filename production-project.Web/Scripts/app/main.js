@@ -12,8 +12,7 @@
       'backbone.validation': '../lib/bower_components/backbone-validation/dist/backbone-validation-amd',
       Marionette: '../lib/bower_components/marionette/lib/backbone.marionette',
       hbs: '../lib/bower_components/require-handlebars-plugin/hbs',
-      datepicker: '../lib/bootstrap-datepicker',
-      'jquery.cookie': '../lib/bower_components/jquery.cookie/jquery.cookie'
+      datepicker: '../lib/bootstrap-datepicker'
     },
 
     hbs: {
@@ -34,9 +33,6 @@
     shim: {
       jquery: {
         exports: '$'
-      },
-      'jquery.cookie': {
-        deps: ['jquery']
       },
       bootstrap: {
         deps: ['jquery']

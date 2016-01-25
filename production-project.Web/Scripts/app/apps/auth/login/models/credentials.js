@@ -4,13 +4,11 @@
   'use strict';
 
   return Backbone.Model.extend({
-    urlRoot: '/token',
+    urlRoot: '/api/tokens',
 
     defaults: {
       username: '',
-      password: '',
-      client_id: 'sparebedsApp',
-      grant_type: 'password'
+      password: ''
     },
 
     validation: {
@@ -22,6 +20,5 @@
         required: true
       }
     }
-
   });
 });

@@ -1,23 +1,22 @@
 ﻿namespace production_project.Web
 {
-    using System.Linq;
     using System.Net.Http.Formatting;
     using System.Web.Http;
-
     using Newtonsoft.Json.Serialization;
 
-    public static class WebApiConfig
+    internal static class WebApiConfig
     {
         public static void Register(HttpConfiguration config)
         {
-            // Web API routes
+            // Web API configuration and services
+            config.Formatters.Clear();
+            config.Filters.Add(new AuthorizeAttribute());
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
+            config.Formatters.Add(new JsonMediaTypeFormatter());
+            config.Formatters.JsonFormatter.SerializerSettings.Converters.Add
+                (new Newtonsoft.Json.Converters.StringEnumConverter());
+            config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             config.MapHttpAttributeRoutes();
-
-            config.Routes.MapHttpRoute("DefaultApi", "api/{controller}/{id}", new { id = RouteParameter.Optional }
-            );
-
-            var jsonFormatter = config.Formatters.OfType<JsonMediaTypeFormatter>().First();
-            jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
         }
     }
 }
