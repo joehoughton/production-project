@@ -2,7 +2,7 @@
   "name": "backbone.radio",
   "description": "Messaging patterns for Backbone applications.",
   "homepage": "https://github.com/marionettejs/backbone.radio",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "build/backbone.radio.js",
   "keywords": [
     "backbone",
@@ -41,7 +41,7 @@
   },
   "github": "https://github.com/marionettejs/backbone.radio",
   "dependencies": {
-    "backbone": "1.0.0 - 1.2.1",
+    "backbone": "1.0.0 - 1.2.3",
     "underscore": "1.4.4 - 1.8.3"
   },
   "devDependencies": {

@@ -26,9 +26,9 @@
         {
             var user = await _userManager.FindAsync(model.Username, model.Password);
             if (user == null)
-                {
+            {
                 return Unauthorized();
-                }
+            }
 
             var identity = new ClaimsIdentity(new[]
             {

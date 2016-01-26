@@ -15,6 +15,8 @@
         type: 'DELETE',
         url: 'api/tokens'
       });
+      // clear previous error messages
+      $('#error-content').empty();
 
       Backbone.history.navigate('login', {trigger: true});
     }
