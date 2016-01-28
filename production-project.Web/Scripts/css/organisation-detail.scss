@@ -1,4 +1,5 @@
-﻿
+﻿$lime-green: #BBCC34;
+
 /* Organisation Detail */
 #organisation-detail .form-control {
     border: 0;  
@@ -83,14 +84,14 @@ a#cancelChanges {
     height: 100%;
     width: 300px;
     text-align: right;
-    color: #bfbfbf;
+    color: $lime-green;
     white-space: nowrap;
 }
 
 .ios-toggle:checked + .checkbox-label {
-    -webkit-box-shadow: inset 0 0 0 20px #A4A4A4,0 0 0 2px #A4A4A4;
-    -moz-box-shadow: inset 0 0 0 20px #A4A4A4,0 0 0 2px #A4A4A4;
-    box-shadow: inset 0 0 0 20px #A4A4A4,0 0 0 2px #A4A4A4;
+    -webkit-box-shadow: inset 0 0 0 20px $lime-green,0 0 0 2px $lime-green;
+    -moz-box-shadow: inset 0 0 0 20px $lime-green,0 0 0 2px $lime-green;
+    box-shadow: inset 0 0 0 20px $lime-green,0 0 0 2px $lime-green;
 }
 
 .ios-toggle:checked + .checkbox-label:before {

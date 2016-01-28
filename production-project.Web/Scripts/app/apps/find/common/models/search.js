@@ -5,7 +5,7 @@
 
   return Backbone.Model.extend({
     defaults: {
-      gpLocation: 'L8 7SS',
+      gpLocation: 'L8 7LF',
       latitude: '',
       longitude: '',
       distance: 25,

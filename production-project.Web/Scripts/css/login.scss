@@ -1,5 +1,7 @@
-﻿$lime-green: #BBCC34;
+﻿$dark-blue: #022144;
+$lime-green: #BBCC34;
 $warning-red: #b94a48;
+$orange: #FFA500;
 
 #sign-in {
     position: relative;
@@ -12,6 +14,7 @@ $warning-red: #b94a48;
 
 #sign-in h2 {
     text-align: center;
+    color: $dark-blue;
 }
 
 #sign-in label {
@@ -24,14 +27,18 @@ $warning-red: #b94a48;
     bottom: -1em;
     left: 0;
     border-radius: 0 !important;
-    background: #6C6C6C;
+    background: $dark-blue;
     color: white;
+}
+
+#sign-in-button:hover {
+    background: $lime-green;
 }
 
 #error-message {
     margin-left: -15px;
     margin-right: -15px;
-    background: #6C6C6C;
+    background: $orange;
     color: white;
     padding: 6px;
 }
@@ -47,17 +54,17 @@ $warning-red: #b94a48;
 }
 
 .success-message {
-    background-color: $lime-green;
+    background-color: $lime-green !important;;
 }
 
 .error-message {
-    background-color: $warning-red;
+    background-color: $warning-red !important;
 }
 
 .warning {
-    border: 1px solid $warning-red !important;
+    border: 1px solid $orange !important;
 }
 
 .warning-label {
-    color: $lime-green;
-}
+    color: $orange;
+} 

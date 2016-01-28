@@ -280,6 +280,8 @@
     <Content Include="Scripts\css\find.scss" />
     <Content Include="Scripts\css\layout.scss" />
     <Content Include="Scripts\css\organisation-detail.scss" />
+    <Content Include="Scripts\fonts\Bariol_Bold.otf" />
+    <Content Include="Scripts\fonts\Bariol_Regular.otf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

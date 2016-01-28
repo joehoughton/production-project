@@ -11,7 +11,7 @@
 
     disableDefaultUI: true,
 
-    zoom: 10,
+    zoom: 11,
 
     styles: [
     {
