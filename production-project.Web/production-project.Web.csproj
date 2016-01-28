@@ -236,6 +236,8 @@
     <Content Include="Scripts\img\bed-location.png" />
     <Content Include="Scripts\img\gp-location.png" />
     <Content Include="Scripts\img\home-location.png" />
+    <Content Include="Scripts\img\spinner-cogs.gif" />
+    <Content Include="Scripts\img\spinner.gif" />
     <Content Include="Scripts\lib\bootstrap-datepicker.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
