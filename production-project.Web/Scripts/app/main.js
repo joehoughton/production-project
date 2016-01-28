@@ -36,6 +36,9 @@
       },
       bootstrap: {
         deps: ['jquery']
+      },
+      datepicker: {
+        deps: ['jquery']
       }
 
     }

@@ -11,7 +11,8 @@
     template: ErrorTemplate,
 
     onRender: function () {
-      this.$el.show();
+      this.$el.fadeIn();
+      this.$el.delay(3000).fadeOut();
     }
   });
 });

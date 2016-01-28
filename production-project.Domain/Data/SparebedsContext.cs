@@ -3,8 +3,11 @@ namespace production_project.Domain.Data
     using System.Data.Entity;
     using System.Data.Entity.ModelConfiguration.Conventions;
     using System.Reflection;
-    using production_project.Domain.Organisation.Models;
+
+    using production_project.Domain.Beds.Models;
+    using production_project.Domain.Organisations.Models;
     using production_project.Domain.Users.Models;
+    using production_project.Domain.Wards.Models;
 
     public class SparebedsContext : DbContext
     {
@@ -26,6 +29,9 @@ namespace production_project.Domain.Data
         public DbSet<Organisation> Organisations { get; set; }
         public DbSet<OrganisationType> OrganisationTypes { get; set; }
         public DbSet<UserDetail> UserDetails { get; set; }
+        public DbSet<Bed> Beds { get; set; }
+        public DbSet<Ward> Wards { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -6,7 +6,7 @@
     using FluentValidation.WebApi;
     using global::Autofac;
     using Microsoft.AspNet.Identity.Owin;
-    using production_project.Domain.Organisation;
+    using production_project.Domain.Organisations;
     using production_project.Domain.Users;
     using production_project.Web.Identity;
     using production_project.Web.Providers;

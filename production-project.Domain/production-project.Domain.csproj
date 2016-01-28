@@ -69,14 +69,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Autofac\AutofacDomainModule.cs" />
+    <Compile Include="Beds\BedRepository.cs" />
+    <Compile Include="Beds\Dto\BedRequestDto.cs" />
+    <Compile Include="Beds\IBedRepository.cs" />
+    <Compile Include="Beds\Mappings\BedMap.cs" />
+    <Compile Include="Beds\Models\Bed.cs" />
+    <Compile Include="Beds\Models\Enums\Gender.cs" />
+    <Compile Include="Beds\Models\Enums\Tier.cs" />
     <Compile Include="Data\SparebedsContext.cs" />
-    <Compile Include="Organisation\Dto\OrganisationDto.cs" />
-    <Compile Include="Organisation\IOrganisationRepository.cs" />
-    <Compile Include="Organisation\Mappings\OrganisationMap.cs" />
-    <Compile Include="Organisation\Mappings\OrganisationTypeMap.cs" />
-    <Compile Include="Organisation\Models\Organisation.cs" />
-    <Compile Include="Organisation\Models\OrganisationType.cs" />
-    <Compile Include="Organisation\OrganisationRepository.cs" />
+    <Compile Include="Organisations\Dto\OrganisationDto.cs" />
+    <Compile Include="Organisations\Dto\OrganisationLocationDto.cs" />
+    <Compile Include="Organisations\Dto\OrganisationSearchDto.cs" />
+    <Compile Include="Organisations\IOrganisationRepository.cs" />
+    <Compile Include="Organisations\Mappings\OrganisationMap.cs" />
+    <Compile Include="Organisations\Mappings\OrganisationTypeMap.cs" />
+    <Compile Include="Organisations\Models\Organisation.cs" />
+    <Compile Include="Organisations\Models\OrganisationType.cs" />
+    <Compile Include="Organisations\OrganisationRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Users\Dto\UserDetailDto.cs" />
     <Compile Include="Users\ICurrentUserProvider.cs" />
@@ -93,6 +102,8 @@
     <Compile Include="Users\Models\CurrentUserDetail.cs" />
     <Compile Include="Users\Models\UserDetail.cs" />
     <Compile Include="Users\UserRepository.cs" />
+    <Compile Include="Wards\Mappings\WardMap.cs" />
+    <Compile Include="Wards\Models\Ward.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

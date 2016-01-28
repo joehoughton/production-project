@@ -1,6 +1,6 @@
 namespace production_project.Domain.Users.Models
 {
-    using production_project.Domain.Organisation.Models;
+    using production_project.Domain.Organisations.Models;
 
     public class UserDetail
     {

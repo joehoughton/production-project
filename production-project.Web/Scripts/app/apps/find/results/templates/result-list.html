@@ -1,0 +1,67 @@
+﻿<div id="result-list" class="row">
+    <form id="additional-search-form">
+        <div class="results-search">
+            <div class="row">
+                <div class="col-xs-6">
+                    <label for="dob"><strong>DOB</strong></label>
+                        <div class="input-group date" id="dob-daterpicker" data-date="" data-date-format="dd/mm/yyyy">
+                            <input class="form-control" type="text" value="{{dob}}" id="dob">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                        </div>
+                </div>
+                <div class="col-xs-6">
+                    <label for="allAges"><strong>All Ages</strong></label>
+                     <br/>
+                    <input class="form-control" type="checkbox" id="allAges" {{#if (isEqual allAges true)}} checked {{/if}}>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-6">
+                    <label for="gender"><strong>Gender</strong></label>
+                    <select id="gender" class="form-control">
+                        <option value="0" {{#if (isEqual 0 tier)}} selected {{/if}}>Both</option>
+                        <option value="100" {{#if (isEqual 100 gender)}} selected {{/if}}>Male</option>
+                        <option value="200" {{#if (isEqual 200 gender)}} selected {{/if}}>Female</option>
+                    </select>
+                </div>
+                <div class="col-xs-6">
+                    <label for="tier"><strong>Bed Tier</strong></label>
+                    <select id="tier" class="form-control">
+                        <option value="0" {{#if (isEqual 0 tier)}} selected {{/if}}>All</option>
+                        <option value="100" {{#if (isEqual 100 tier)}} selected {{/if}}>Low</option>
+                        <option value="200" {{#if (isEqual 200 tier)}} selected {{/if}}>Medium</option>
+                        <option value="300" {{#if (isEqual 300 tier)}} selected {{/if}}>High</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-6">
+                    <label for="gpLocation"><strong>GP Postcode</strong></label>
+                    <input class="form-control"  type="text" id="gpLocation" value="{{gpLocation}}" />
+                </div>
+                <div class="col-xs-6">
+                    <label for="distance"><strong>Distance (mi)</strong></label>
+                    <select id="distance" class="form-control">
+                        <option value="15" {{#if (isEqual 15 distance)}} selected {{/if}}>15</option>
+                        <option value="25" {{#orCondition (isEqual 25 distance) '||' (isEqual 0 distance)}} selected {{/orCondition}}>25</option>
+                        <option value="50" {{#if (isEqual 50 distance)}} selected {{/if}}>50</option>
+                        <option value="100" {{#if (isEqual 100 distance)}} selected {{/if}}>100</option>
+                        <option value="300" {{#if (isEqual 300 distance)}} selected {{/if}}>300</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div>
+                    <span id="find-availability">Find Availability <i class="fa fa-chevron-right"></i></span>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="row" id="list-border-top">
+    <ul></ul>
+</div>

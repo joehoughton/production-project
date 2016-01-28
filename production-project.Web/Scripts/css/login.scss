@@ -1,0 +1,63 @@
+﻿$lime-green: #BBCC34;
+$warning-red: #b94a48;
+
+#sign-in {
+    position: relative;
+    max-width: 360px;
+    padding: 19px 29px 29px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+}
+
+#sign-in h2 {
+    text-align: center;
+}
+
+#sign-in label {
+    font-weight: normal;
+}
+
+#sign-in-button {
+    width: 100%;
+    position: absolute;
+    bottom: -1em;
+    left: 0;
+    border-radius: 0 !important;
+    background: #6C6C6C;
+    color: white;
+}
+
+#error-message {
+    margin-left: -15px;
+    margin-right: -15px;
+    background: #6C6C6C;
+    color: white;
+    padding: 6px;
+}
+
+#error-message i {
+    font-size: 15px;
+}
+
+#error-message ul {
+    text-align: center;
+    list-style: none outside none;
+    margin-bottom: 0;
+}
+
+.success-message {
+    background-color: $lime-green;
+}
+
+.error-message {
+    background-color: $warning-red;
+}
+
+.warning {
+    border: 1px solid $warning-red !important;
+}
+
+.warning-label {
+    color: $lime-green;
+}

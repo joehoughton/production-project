@@ -1,0 +1,46 @@
+﻿<div class="result-item" data-id="{{organisationId}}" data-bedid="{{bedId}}">
+    <div class="row">
+        <div class="col-xs-12 remove-span-height">
+            <div class="row title-row">
+                <span class="bold title">{{organisationName}}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="row pull-left" style="padding-left:25px">
+                <span><strong>Type:</strong> {{bedType}}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="row">
+                <span><strong>Age:</strong> {{minAge}}-{{maxAge}}</span>
+            </div>
+            <div class="row">
+                <span><strong>Tier:</strong> {{tier}}</span>
+            </div>
+        </div>
+
+        <div class="col-xs-6">
+            <div class="row">
+                <span><strong>Gender:</strong> {{gender}}</span>
+            </div>
+            <div class="row">
+                <span><strong>Price:</strong> &pound;{{bedPrice}} / day</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-6 bottom">
+            <span>{{distance}} Miles</span>
+        </div>
+        <div class="col-xs-6 bottom">
+            <span class="create-booking right" data-organisationid="{{organisationId}}" data-bedid="{{bedId}}">Make Booking <i class="fa fa-chevron-right"></i></span>
+        </div>
+    </div>
+</div>

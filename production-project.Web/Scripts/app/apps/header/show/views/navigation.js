@@ -15,18 +15,24 @@
     className: 'nav navbar-nav',
 
     events: {
-      'click #account-nav': 'navigateAccount',
-      'click #logout': 'logout'
-    },
-
-    navigateAccount: function (e) {
-      e.preventDefault();
-      Backbone.history.navigate('account/organisation', {trigger: true});
+      'click #logout': 'logout',
+      'click #account-nav': 'navigateToAccount',
+      'click #find-nav': 'navigateToFind'
     },
 
     logout: function (e) {
       e.preventDefault();
       Backbone.history.navigate('logout', {trigger: true});
+    },
+
+    navigateToAccount: function (e) {
+      e.preventDefault();
+      Backbone.history.navigate('account/organisation', {trigger: true});
+    },
+
+    navigateToFind: function (e) {
+      e.preventDefault();
+      Backbone.history.navigate('find', {trigger: true});
     }
 
   });

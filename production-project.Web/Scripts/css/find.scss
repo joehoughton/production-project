@@ -1,0 +1,256 @@
+﻿$dark-blue: #022144;
+$dark-grey: #777777;
+$light-grey: #B5B5B5;
+$lime-green: #BBCC34;
+
+.results-search {
+    input {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        font-size: 10px;
+        width: 100%;
+    }
+
+    label {
+        color: #000000;
+        font-size: 11px;
+        margin-top: 3px;
+    }
+
+    select {
+        width: 100%;
+        font-size: 11px;
+        padding: 0;
+    }
+
+    #gplocation {
+        margin-top: 15px;
+    }
+}
+.gm-style-mtc{
+    margin-bottom:20px;
+}
+
+
+#search-region {
+    position: absolute;
+    left: 6.5%;
+    width: 300px;
+    max-width: 1170px;
+    top: 1em;
+
+    .container {
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        width: 300px;
+    }
+
+    input {
+        border-radius: 0;
+    }
+}
+
+@media only screen and (min-width : 329px) {
+    #search-region {
+       top: 7em;
+    }
+}
+
+@media only screen and (max-width : 351px) {
+    #search-region {
+        left: 2%;
+        top: 9em;
+    }
+}
+
+#map-region {
+    height: 90vh;
+}
+
+
+#return {
+    color: $dark-blue;
+    margin-top: 15px;
+    cursor: pointer;
+
+    i {
+        padding: 6px;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+#additional-search-form {
+    border: 2px solid $dark-blue !important;
+    background: #ffffff;
+    font-size: 14px;
+    float: left;
+    color: #000000;
+    padding: 0px 10px 0px 10px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 5px;
+    border-radius: 0;
+    margin: 0 0 0 0;
+    
+    input#age {
+        width: 100%;
+    }
+
+    .gender-filter {
+        label {
+            display: inline-block;
+            font-size: 14px;
+        }
+
+        [type=radio] {
+            margin: 2px;
+        }
+    }
+
+    strong {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 20px;
+        color: $dark-grey;
+    }
+
+    .icon {
+        position: relative;
+        font-size: 20px;
+        cursor: pointer;
+        padding-left: 20px;
+        float: right;
+    }
+
+    .input-row {
+        padding-top: 20px;
+    }
+
+    .gender-label {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 20px;
+        color: #000000;
+    }
+
+    #allAges {
+        width: 18px !important;
+        margin: 0;
+        transform: scale(1.5, 1.5);
+    }
+
+    #find-availability {
+        color: $dark-blue;
+        margin-top: 10px;
+        cursor: pointer;
+        float:right;
+        padding-right: 25px;
+    }
+}
+
+#list-border-top {
+    ul {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+
+#result-list {
+    width: 300px;
+    color: $dark-grey;
+
+    .navigation {
+        background-color: white;
+        border: 1px solid $dark-blue !important;
+        color: $dark-blue;
+        margin-bottom: 10px;
+
+        span {
+            i {
+                padding: 10px;
+            }
+        }
+    }
+
+    ul {
+        margin: 0;
+        li {
+            margin: 0;
+            list-style: none;
+        }
+    }
+
+    .label-info {
+        background-color: $dark-blue;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .icon {
+        cursor: pointer;
+    }
+
+    #list-border-top {
+        border-top: 1px solid $dark-blue;
+    }
+
+    .active {
+        background-color: white;
+    }
+
+    button {
+        margin-top: 0;
+        font-size: 10px;
+    }
+}
+
+.result-item {
+    width: 100%;
+    background-color: white;
+    padding: 2px 20px 2px 20px;
+    border-bottom: 2px solid $dark-blue !important;
+    border-left: 2px solid $dark-blue !important;
+    border-right: 2px solid $dark-blue !important;
+    text-align: center;
+
+    .bold {
+        font-weight: bold;
+    }
+
+    .title {
+        @extend .bold;
+        color: black !important;
+    }
+
+    .title-row {
+        padding-bottom: 5px;
+    }
+
+    .right {
+        float: right;
+    }
+
+    .remove-span-height {
+        margin-bottom: -99999px;
+        padding-bottom: 99999px;
+    }
+
+    .bottom {
+        @extend .remove-span-height;
+        color: black;
+        margin-top: 5px;
+    }
+
+    .create-booking {
+        cursor: pointer;
+    }
+
+    &.active {
+        border: 2px solid $dark-blue !important;
+        background-color: lavender;
+    }
+}

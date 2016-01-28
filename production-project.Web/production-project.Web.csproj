@@ -198,6 +198,17 @@
     <Content Include="Scripts\app\apps\auth\login\templates\view.html" />
     <Content Include="Scripts\app\apps\auth\login\views\layout.js" />
     <Content Include="Scripts\app\apps\auth\logout\controller.js" />
+    <Content Include="Scripts\app\apps\find\common\map.options.js" />
+    <Content Include="Scripts\app\apps\find\common\models\search.js" />
+    <Content Include="Scripts\app\apps\find\common\templates\layout.html" />
+    <Content Include="Scripts\app\apps\find\common\views\layout.js" />
+    <Content Include="Scripts\app\apps\find\find.app.js" />
+    <Content Include="Scripts\app\apps\find\results\collections\result-collection.js" />
+    <Content Include="Scripts\app\apps\find\results\controller.js" />
+    <Content Include="Scripts\app\apps\find\results\models\result.js" />
+    <Content Include="Scripts\app\apps\find\results\templates\result-item.html" />
+    <Content Include="Scripts\app\apps\find\results\templates\result-list.html" />
+    <Content Include="Scripts\app\apps\find\results\views\results-list.js" />
     <Content Include="Scripts\app\apps\header\header.app.js" />
     <Content Include="Scripts\app\apps\header\show\controller.js" />
     <Content Include="Scripts\app\apps\header\show\models\navCollection.js" />
@@ -211,15 +222,21 @@
     <Content Include="Scripts\app\config\marionette.js" />
     <Content Include="Scripts\app\config\validation.js" />
     <Content Include="Scripts\app\main.js" />
+    <Content Include="Scripts\app\plugins\handlebars\formatGender.js" />
     <Content Include="Scripts\app\plugins\handlebars\isEqual.js" />
+    <Content Include="Scripts\app\plugins\handlebars\orCondition.js" />
     <Content Include="Scripts\css\bootstrap.css" />
     <Content Include="Scripts\css\bootstrap.min.css" />
-    <Content Include="Scripts\css\font-awesome.css" />
     <Content Include="Scripts\css\font-awesome.min.css" />
     <Content Include="Scripts\css\site.css" />
     <Content Include="Scripts\db\ProofOfConcept.sql" />
     <Content Include="Scripts\fonts\bootstrap\glyphicons-halflings-regular.svg" />
     <Content Include="Scripts\fonts\fontawesome-webfont.svg" />
+    <Content Include="Scripts\img\bed-location-active.png" />
+    <Content Include="Scripts\img\bed-location.png" />
+    <Content Include="Scripts\img\gp-location.png" />
+    <Content Include="Scripts\img\home-location.png" />
+    <Content Include="Scripts\lib\bootstrap-datepicker.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -228,8 +245,9 @@
     <Compile Include="App_Start\AutofacConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\Organisation\OrganisationController.cs" />
-    <Compile Include="Controllers\Token\TokensController.cs" />
+    <Compile Include="Controllers\Beds\BedsController.cs" />
+    <Compile Include="Controllers\Organisations\OrganisationsController.cs" />
+    <Compile Include="Controllers\Tokens\TokensController.cs" />
     <Compile Include="Controllers\Users\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -256,8 +274,12 @@
     <Content Include="Scripts\fonts\fontawesome-webfont.woff" />
     <Content Include="Scripts\fonts\fontawesome-webfont.woff2" />
     <Content Include="Scripts\fonts\FontAwesome.otf" />
-    <Content Include="Scripts\css\font-awesome.css.map" />
     <Content Include="Scripts\css\site.scss" />
+    <Content Include="Scripts\css\bootstrap-datepicker.scss" />
+    <Content Include="Scripts\css\login.scss" />
+    <Content Include="Scripts\css\find.scss" />
+    <Content Include="Scripts\css\layout.scss" />
+    <Content Include="Scripts\css\organisation-detail.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -267,8 +289,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Scripts\app\apps\account\sidebar\models\" />
-    <Folder Include="Scripts\img\" />
-    <Folder Include="Scripts\lib\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\production-project.Domain\production-project.Domain.csproj">
