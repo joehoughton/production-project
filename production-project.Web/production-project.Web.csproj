@@ -225,9 +225,7 @@
     <Content Include="Scripts\app\plugins\handlebars\formatGender.js" />
     <Content Include="Scripts\app\plugins\handlebars\isEqual.js" />
     <Content Include="Scripts\app\plugins\handlebars\orCondition.js" />
-    <Content Include="Scripts\css\bootstrap.css" />
-    <Content Include="Scripts\css\bootstrap.min.css" />
-    <Content Include="Scripts\css\font-awesome.min.css" />
+    <Content Include="Scripts\css\bootstrap\bootstrap.css" />
     <Content Include="Scripts\css\site.css" />
     <Content Include="Scripts\db\ProofOfConcept.sql" />
     <Content Include="Scripts\fonts\bootstrap\glyphicons-halflings-regular.svg" />
@@ -237,7 +235,6 @@
     <Content Include="Scripts\img\gp-location.png" />
     <Content Include="Scripts\img\home-location.png" />
     <Content Include="Scripts\img\spinner-cogs.gif" />
-    <Content Include="Scripts\img\spinner.gif" />
     <Content Include="Scripts\lib\bootstrap-datepicker.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -267,23 +264,36 @@
     <Content Include="packages.config" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <None Include="Properties\PublishProfiles\ngAuthenticationAPI.pubxml" />
-    <Content Include="Scripts\fonts\bootstrap\glyphicons-halflings-regular.eot" />
-    <Content Include="Scripts\fonts\bootstrap\glyphicons-halflings-regular.ttf" />
-    <Content Include="Scripts\fonts\bootstrap\glyphicons-halflings-regular.woff" />
-    <Content Include="Scripts\fonts\bootstrap\glyphicons-halflings-regular.woff2" />
+    <Content Include="Scripts\css\site.scss" />
+    <Content Include="Scripts\css\bootstrap-datepicker.scss" />
+    <Content Include="Scripts\css\login.scss" />
+    <Content Include="Scripts\css\find-beds.scss" />
+    <Content Include="Scripts\css\layout.scss" />
+    <Content Include="Scripts\css\organisation-detail.scss" />
+    <Content Include="Scripts\fonts\Bariol\Bariol_Bold.otf" />
+    <Content Include="Scripts\fonts\Bariol\Bariol_Regular.otf" />
     <Content Include="Scripts\fonts\fontawesome-webfont.eot" />
     <Content Include="Scripts\fonts\fontawesome-webfont.ttf" />
     <Content Include="Scripts\fonts\fontawesome-webfont.woff" />
     <Content Include="Scripts\fonts\fontawesome-webfont.woff2" />
     <Content Include="Scripts\fonts\FontAwesome.otf" />
-    <Content Include="Scripts\css\site.scss" />
-    <Content Include="Scripts\css\bootstrap-datepicker.scss" />
-    <Content Include="Scripts\css\login.scss" />
-    <Content Include="Scripts\css\find.scss" />
-    <Content Include="Scripts\css\layout.scss" />
-    <Content Include="Scripts\css\organisation-detail.scss" />
-    <Content Include="Scripts\fonts\Bariol_Bold.otf" />
-    <Content Include="Scripts\fonts\Bariol_Regular.otf" />
+    <Content Include="Scripts\css\font-awesome\font-awesome.scss" />
+    <Content Include="Scripts\css\font-awesome\_animated.scss" />
+    <Content Include="Scripts\css\font-awesome\_bordered-pulled.scss" />
+    <Content Include="Scripts\css\font-awesome\_core.scss" />
+    <Content Include="Scripts\css\font-awesome\_fixed-width.scss" />
+    <Content Include="Scripts\css\font-awesome\_icons.scss" />
+    <Content Include="Scripts\css\font-awesome\_larger.scss" />
+    <Content Include="Scripts\css\font-awesome\_list.scss" />
+    <Content Include="Scripts\css\font-awesome\_mixins.scss" />
+    <Content Include="Scripts\css\font-awesome\_path.scss" />
+    <Content Include="Scripts\css\font-awesome\_rotated-flipped.scss" />
+    <Content Include="Scripts\css\font-awesome\_stacked.scss" />
+    <Content Include="Scripts\css\font-awesome\_variables.scss" />
+    <Content Include="Scripts\fonts\bootstrap\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\fonts\bootstrap\glyphicons-halflings-regular.ttf" />
+    <Content Include="Scripts\fonts\bootstrap\glyphicons-halflings-regular.woff" />
+    <Content Include="Scripts\fonts\bootstrap\glyphicons-halflings-regular.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -82,6 +82,19 @@ module.exports = function(grunt) {
                 }
             }
         },
+		copy: {
+			  main: {
+				files: [
+				  {
+					nonull: true,
+					expand: true,
+					cwd: 'production-project.Web/Scripts/lib/bower_components/bootstrap-sass-official/assets',
+					src: ['fonts/**'],
+					dest: 'production-project.Web/Scripts/'
+				  }
+				]
+			  }
+		},
     });
 
     grunt.loadNpmTasks('grunt-contrib-sass');
@@ -89,7 +102,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-jscs');
 	grunt.loadNpmTasks('grunt-bower-task');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	
-    grunt.registerTask('build', ['bower:install','sass:dist', 'jshint:dist', 'jscs:dist']); // run grunt build from command line - production
+    grunt.registerTask('build', ['bower:install', 'copy', 'sass:dist', 'jshint:dist', 'jscs:dist']); // run grunt build from command line - production
     grunt.registerTask('default', ['sass:dev', 'watch', 'jshint:dev', 'jscs:dev']); // run grunt from command line - development
 };

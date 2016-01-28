@@ -7,12 +7,15 @@
     {
         public WardMap()
         {
+            // Primary Key
             HasKey(t => t.Id);
 
+            // Properties
             Property(t => t.Name)
                 .IsRequired()
                 .HasMaxLength(50);
 
+            // Relationships
             ToTable("Ward");
             Property(t => t.Id).HasColumnName("Id");
             Property(t => t.Name).HasColumnName("Name");
