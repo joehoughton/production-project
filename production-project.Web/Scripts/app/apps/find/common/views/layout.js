@@ -9,7 +9,8 @@
     template: layoutView,
 
     regions: {
-      search: '#search-region'
+      search: '#search-region',
+      booking: '#booking-region'
     }
   });
 });

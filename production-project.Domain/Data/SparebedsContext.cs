@@ -5,7 +5,9 @@ namespace production_project.Domain.Data
     using System.Reflection;
 
     using production_project.Domain.Beds.Models;
+    using production_project.Domain.BookingRequests.Models;
     using production_project.Domain.Organisations.Models;
+    using production_project.Domain.Patients.Models;
     using production_project.Domain.Users.Models;
     using production_project.Domain.Wards.Models;
 
@@ -31,7 +33,8 @@ namespace production_project.Domain.Data
         public DbSet<UserDetail> UserDetails { get; set; }
         public DbSet<Bed> Beds { get; set; }
         public DbSet<Ward> Wards { get; set; }
-
+        public DbSet<BookingRequest> BookingRequests { get; set; }
+        public DbSet<Patient> Patients { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

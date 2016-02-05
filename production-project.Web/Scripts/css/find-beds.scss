@@ -2,6 +2,7 @@
 $dark-grey: #777777;
 $light-grey: #B5B5B5;
 $lime-green: #BBCC34;
+$icon-red: #b94a48;
 
 .results-search {
     input {
@@ -251,5 +252,115 @@ li {
     &.active {
         border: 2px solid $dark-blue !important;
         background-color: lavender;
+    }
+}
+
+#create {
+    background-color: white;
+
+    hr {
+        width: 90%;
+    }
+
+    .form-commands {
+        position: inherit;
+    }
+
+    #notes {
+        width: 96%;
+        max-width: 96%;
+        font-size: 13px;
+    }
+
+    .form-group-commands {
+        padding-bottom: 10px;
+    }
+
+    .title {
+        font-weight: bold;
+        padding-top: 20px;
+        font-size: 18px;
+
+        .organisation-name {
+            color: $dark-grey;
+            padding-bottom: 10px;
+
+            .fa-user {
+                font-size: 25px;
+                color: $icon-red !important;
+            }
+
+            i.fa-arrow-right.outgoing {
+                font-size: 15px;
+                margin-left: -7px;
+                padding-right: 0px;
+                color: $icon-red;
+            }
+        }
+
+        .organisation-type {
+            display: block;
+            padding-left: 36px;
+        }
+
+        .icon {
+            float: right;
+            cursor: pointer;
+            color: $dark-blue;
+            font-size: 14px;
+            font-weight: normal;
+
+            i {
+                color: $dark-blue;
+            }
+        }
+    }
+
+    @media only screen and (max-width : 767px) {
+        .title {
+            font-weight: bold;
+            padding-top: 20px;
+            font-size: 14px;
+        }
+        .organisation-type {
+            padding-left: 0 !important;
+        }
+    }
+
+    .booking-detail {
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+
+    @media only screen and (max-width : 768px) {
+        .booking-detail {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    ul {
+        padding-left: 0px;
+        margin: 0;
+        font-weight: bold;
+
+        li {
+            list-style: none;
+        }
+    }
+
+    input#clinical-information{
+        vertical-align: -2px;
+    }
+
+    .clinical {
+        color: black;
+        padding-top: 10px;
+
+        label {
+            span {
+                color: black;
+            }
+        }
     }
 }

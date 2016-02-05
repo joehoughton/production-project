@@ -5,8 +5,9 @@
   'backbone.radio',
   'Marionette',
   './results/controller',
+  './create/controller',
   './common/models/search'
-], function ($, _, Backbone, Radio, Marionette, ResultsController, Search) {
+], function ($, _, Backbone, Radio, Marionette, ResultsController, CreateBookingController, Search) {
   'use strict';
 
   return Marionette.Object.extend({
@@ -95,6 +96,18 @@
         region: this.region,
         model: this.model,
         searchForBeds: this.searchForBeds
+      });
+    },
+
+    createBooking: function (organisationId, bedId) {
+      var that = this;
+      $.get('/api/beds/' + bedId).done(function (bedRequestDto) {
+        that.model.set({bed: bedRequestDto});
+
+        return new CreateBookingController({
+          region: that.region,
+          model: that.model
+        });
       });
     }
 

@@ -1,0 +1,150 @@
+﻿<div class="row" id="create">
+    <!-- header mobile view-->
+    <div class="visible-xs col-xs-12 title">
+        <span class="icon pull-right"><i class="fa fa-chevron-left"></i> Return to Results</span>
+        <br/>
+        <span class="organisation-name">
+            <i class="fa fa-user"></i>
+            <i class="fa fa-arrow-right red outgoing"></i>
+        </span>
+        <br/>
+        <span class="organisation-name">{{organisationName}}</span>
+        <span class="organisation-type">{{organisationType}}</span>
+    </div>
+    <!-- header non-mobile view-->
+    <div class="hidden-xs col-sm-12 title">
+        <span class="organisation-name">
+            <i class="fa fa-user"></i>
+            <i class="fa fa-arrow-right red outgoing"></i> {{organisationName}}
+        </span>
+        <span class="icon hidden-xs"><i class="fa fa-chevron-left"></i> Return to Results</span>
+        <span class="organisation-type">{{organisationType}}</span>
+    </div>
+
+    <hr/>
+
+    <div class="booking-detail">
+        <div class="col-xs-12">
+            <span class="title">Patient Booking</span>
+        </div>
+
+        <br/>
+
+        <div class="col-sm-5">
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-sm-4">
+                        <label for="pasId" class="control-label">Patient Identifier</label>
+                    </div>
+                    <div class="col-sm-7 col-md-5">
+                        <input type="text" id="pasId" class="form-control" value="{{name}}" placeholder="Patient Identifier" required/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-6 col-sm-4">
+                    <label>
+                        <strong>Age</strong>
+                    </label>
+                </div>
+                <div class="col-xs-6 col-sm-8">
+                    {{#if (isEqual true allAges)}}
+                    <span> All Ages</span>
+                    {{else}}
+                    <span>{{patient.attributes.age}}</span>
+                    {{/if}}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-6 col-sm-4">
+                    <label>
+                        <strong>Gender</strong>
+                    </label>
+                </div>
+
+                <div class="col-xs-6 col-sm-8">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <span>{{formatGender patient.attributes.gender}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-6 col-sm-4">
+                    <label>
+                        <strong>Bed Tier</strong>
+                    </label>
+                </div>
+
+                <div class="col-xs-6 col-sm-8">
+                    <span id="tier">{{tier}}</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-6 col-sm-4">
+                    <label>
+                        <strong>Rate</strong>
+                    </label>
+                </div>
+
+                <div class="col-xs-6 col-sm-8">
+                    <span id="price">&pound;{{price}} / day </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-7">
+            <div class="row">
+                <div class="col-xs-12">
+                    <label for="notes">
+                        <strong>Notes (Non-Clinical)</strong>
+                    </label>
+                    <textarea id="notes" rows="6" class="form-control" placeholder="Add additional anonymised notes..."></textarea>
+                </div>
+            </div>
+
+            <hr id="clinical-information-hr"/>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <label>
+                        <strong>Clinical Information</strong>
+                    </label>
+                    <br/>
+                    <span>You can send all clinical information via NHSmail to: </span>
+                    <ul>
+                        {{#each emails}}
+                        <li>{{this}}</li>
+                        {{/each}}
+                        {{#unless emails}}
+                        <li>Sorry, no email addresses have been provided by {{organisationName}}.</li>
+                        {{/unless}}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row clinical">
+                <div class="col-xs-12">
+                    <label for="clinical-information">
+                        <input type="checkbox" id="clinical-information">
+                        <span>I will be sending the clinical information</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="col-xs-12">
+        <div class="form-group button-group">
+            <button type="submit" class="btn btn-primary" id="create-booking">Submit</button>
+            <a href="" id="cancelChanges">Cancel</a>
+        </div>
+    </div>
+</div>
