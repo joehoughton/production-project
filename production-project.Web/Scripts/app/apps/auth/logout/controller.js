@@ -16,7 +16,8 @@
         url: 'api/tokens'
       });
       // clear previous error messages
-      $('#error-content').empty();
+      this.alertChannel = Backbone.Radio.channel('alert');
+      this.alertChannel.trigger('close');
 
       Backbone.history.navigate('login', {trigger: true});
     }

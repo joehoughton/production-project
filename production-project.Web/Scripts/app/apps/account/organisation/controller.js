@@ -23,7 +23,8 @@
 
     show: function () {
       // clear previous error messages
-      $('#error-content').empty();
+      this.alertChannel = Backbone.Radio.channel('alert');
+      this.alertChannel.trigger('close');
 
       this.model = new UserOrganisation();
       var accountLayout = new AccountLayout();

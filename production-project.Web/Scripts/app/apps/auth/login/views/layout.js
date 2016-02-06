@@ -19,7 +19,8 @@
       e.preventDefault();
 
       // clear previous error messages
-      $('#error-content').empty();
+      this.alertChannel = Backbone.Radio.channel('alert');
+      this.alertChannel.trigger('close');
 
       var username = $('#username').val();
       var password = $('#password').val();

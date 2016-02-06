@@ -29,7 +29,8 @@
     saveChanges: function (e) {
       e.preventDefault();
 
-      $('#error-content').empty(); // clear previous error messages
+      this.alertChannel = Backbone.Radio.channel('alert');
+      this.alertChannel.trigger('close');
 
       var name = $('#name').val();
       var email = $('#email').val();
@@ -54,7 +55,8 @@
           Backbone.Radio.channel('alert').trigger('success', 'Account details have been saved');
         },
         error: function () {
-          $('#error-content').empty(); // clear previous error messages
+          var alertChannel = Backbone.Radio.channel('alert');
+          alertChannel.trigger('close');
           Backbone.Radio.channel('alert').trigger('warning', 'Server failed to update user details');
         }
       });

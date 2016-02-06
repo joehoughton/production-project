@@ -31,6 +31,10 @@
       alertChannel.on('error', function (message) {
         that.show(message, 'error');
       });
+
+      alertChannel.on('close', function () {
+        that.region.empty();
+      });
     },
 
     show: function (message, type) {
