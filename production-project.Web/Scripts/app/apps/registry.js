@@ -5,8 +5,9 @@
   'apps/header/header.app',
   'apps/auth/auth.app',
   'apps/account/account.app',
-  'apps/find/find.app'
-], function (_, Marionette, AlertApp, HeaderApp, AuthApp, AccountApp, FindApp) {
+  'apps/find/find.app',
+  'apps/booking/booking.app'
+], function (_, Marionette, AlertApp, HeaderApp, AuthApp, AccountApp, FindApp, BookingApp) {
   'use strict';
 
   var AppRegistry = Marionette.Object.extend({
@@ -54,6 +55,11 @@
   registry.add({
     name: 'FindApp',
     app: FindApp
+  });
+
+  registry.add({
+    name: 'BookingApp',
+    app: BookingApp
   });
 
   return registry;

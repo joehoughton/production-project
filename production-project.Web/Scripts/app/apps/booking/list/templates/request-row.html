@@ -1,0 +1,35 @@
+﻿<td>
+    <span id="user-icon">
+        {{#if incoming}}
+        <i class="fa fa-arrow-right blue"></i>
+        <i class="fa fa-user blue"></i>
+        {{else}}
+        <i class="fa fa-user red"></i>
+        <i class="fa fa-arrow-right red outgoing"></i>
+        {{/if}}
+    </span>
+</td>
+
+<td>
+    <span id="pasid">{{pasId}}</span>
+</td>
+
+<td>
+    <span class="label label-{{setStatus currentStatus}}">{{currentStatus}}</span>
+</td>
+
+<td>
+    <span>{{organisationFrom}}</span>
+</td>
+
+<td>
+    <span>{{organisationTo}}</span>
+</td>
+
+<td>
+    <span>{{tier}}</span>
+</td>
+
+<td>
+    <span class="icon">{{formatDate dateRequested}}</span>
+</td>

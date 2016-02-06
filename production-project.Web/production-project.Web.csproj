@@ -198,6 +198,13 @@
     <Content Include="Scripts\app\apps\auth\login\templates\view.html" />
     <Content Include="Scripts\app\apps\auth\login\views\layout.js" />
     <Content Include="Scripts\app\apps\auth\logout\controller.js" />
+    <Content Include="Scripts\app\apps\booking\booking.app.js" />
+    <Content Include="Scripts\app\apps\booking\list\collections\request-collection.js" />
+    <Content Include="Scripts\app\apps\booking\list\controller.js" />
+    <Content Include="Scripts\app\apps\booking\list\models\request.js" />
+    <Content Include="Scripts\app\apps\booking\list\templates\request-row.html" />
+    <Content Include="Scripts\app\apps\booking\list\templates\request-table.html" />
+    <Content Include="Scripts\app\apps\booking\list\views\booking.js" />
     <Content Include="Scripts\app\apps\find\common\map.options.js" />
     <Content Include="Scripts\app\apps\find\common\models\search.js" />
     <Content Include="Scripts\app\apps\find\common\templates\layout.html" />
@@ -226,10 +233,15 @@
     <Content Include="Scripts\app\config\marionette.js" />
     <Content Include="Scripts\app\config\validation.js" />
     <Content Include="Scripts\app\main.js" />
+    <Content Include="Scripts\app\plugins\handlebars\checkForRequests.js" />
+    <Content Include="Scripts\app\plugins\handlebars\formatDate.js" />
     <Content Include="Scripts\app\plugins\handlebars\formatGender.js" />
     <Content Include="Scripts\app\plugins\handlebars\isEqual.js" />
+    <Content Include="Scripts\app\plugins\handlebars\noRequestsMessage.js" />
     <Content Include="Scripts\app\plugins\handlebars\orCondition.js" />
+    <Content Include="Scripts\app\plugins\handlebars\setStatus.js" />
     <Content Include="Scripts\css\bootstrap\bootstrap.css" />
+    <Content Include="Scripts\css\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Scripts\css\site.css" />
     <Content Include="Scripts\db\ProofOfConcept.sql" />
     <Content Include="Scripts\fonts\bootstrap\glyphicons-halflings-regular.svg" />
@@ -299,6 +311,11 @@
     <Content Include="Scripts\fonts\bootstrap\glyphicons-halflings-regular.ttf" />
     <Content Include="Scripts\fonts\bootstrap\glyphicons-halflings-regular.woff" />
     <Content Include="Scripts\fonts\bootstrap\glyphicons-halflings-regular.woff2" />
+    <Content Include="Scripts\css\booking-requests.scss" />
+    <Content Include="Scripts\css\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\css\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Scripts\css\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Scripts\css\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

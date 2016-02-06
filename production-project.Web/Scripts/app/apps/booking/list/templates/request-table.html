@@ -1,0 +1,46 @@
+﻿<div id="booking">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row filter">
+                <span id="all">All</span>
+                <span id="outgoing">Outgoing</span>
+                <span id="incoming">Incoming</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Request</th>
+                    <th id="id">Patient Identifier</th>
+                    <th id="status">Status</th>
+                    <th class="organisations">From</th>
+                    <th class="organisations">To</th>
+                    <th>Tier</th>
+                    <th id="date">
+                        <span>Date / Time <i id="date-sort-icon" class="fa fa-chevron-down"></i></span>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#if (checkForRequests active availableRequests)}}
+                <tr>
+                    <td id="noRequests">
+                        {{noRequestsMessage active}}
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                {{/if}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

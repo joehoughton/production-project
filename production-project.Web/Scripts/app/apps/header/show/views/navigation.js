@@ -17,7 +17,8 @@
     events: {
       'click #logout': 'logout',
       'click #account-nav': 'navigateToAccount',
-      'click #find-nav': 'navigateToFind'
+      'click #find-nav': 'navigateToFind',
+      'click #bookings-nav': 'navigateToBookings'
     },
 
     logout: function (e) {
@@ -33,6 +34,11 @@
     navigateToFind: function (e) {
       e.preventDefault();
       Backbone.history.navigate('find', {trigger: true});
+    },
+
+    navigateToBookings: function (e) {
+      e.preventDefault();
+      Backbone.history.navigate('bookings', {trigger: true});
     }
 
   });

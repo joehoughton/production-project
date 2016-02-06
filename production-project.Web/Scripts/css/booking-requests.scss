@@ -1,0 +1,141 @@
+﻿$dark-blue: #022144;
+$lime-green: #BBCC34;
+$dark-grey:  #022144;
+$light-grey: #B5B5B5;
+$icon-blue: #022144;
+$icon-red: #CF2924;
+
+#booking {
+    padding: 10px;
+
+    .table tbody tr {
+        cursor: pointer;
+    }
+
+    .table th, .table td, .table tr {
+        padding: 8px;
+        line-height: 20px;
+        text-align: center;
+        vertical-align: central;
+    }
+
+    th#date {
+        cursor: pointer;
+    }
+
+    table, .table tr {
+        border: 1px solid $light-grey !important;
+    }
+
+    .table td, .table th {
+        border-bottom: 1px solid $light-grey;
+    }
+
+    .table td, .table tr {
+        color: $dark-grey;
+        vertical-align: middle;
+    }
+
+    thead tr th {
+        background-color: $dark-grey;
+        color: white !important;
+    }
+
+    tr {
+        background-color:white;
+    }
+
+    .table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th {
+        background-color: $lime-green;
+        span, #pasid {
+            color: white !important;
+        }
+
+    }
+
+    .icon {
+        .fa-chevron-right:before {
+            padding-left: 20px;
+            color: black;
+        }
+    }
+
+    #pasid {
+        color: black;
+    }
+
+    .ward-group {
+        span {
+            display: block;
+        }
+
+        #organisation-type {
+            color: black;
+        }
+    }
+
+    .label {
+        padding: 8px 6px;
+    }
+
+    .label-info {
+        background-color: $icon-blue;
+    }
+
+    #user-icon {
+        font-size: 20px;
+
+        .red {
+            color: $icon-red;
+        }
+
+        .blue {
+            color: $icon-blue;
+        }
+
+        i.fa-arrow-right {
+            margin-right: -7px;
+            font-size: 15px;
+            color: $icon-blue;
+        }
+
+        i.fa-arrow-right.outgoing {
+            font-size: 15px;
+            margin-left: -7px;
+            color: $icon-red;
+        }
+    }
+
+    .organisations {
+        width: 20%;
+    }
+
+    .filter {
+        padding-bottom: 10px;
+
+        span {
+            font-size: 14px;
+            border: 1px solid $light-grey;
+            margin: 0 auto;
+            float: left;
+            padding: 5px 15px 5px 15px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        #outgoing {
+            border-left: none;
+            border-right: none;
+        }
+    }
+
+    .active {
+        background-color: $lime-green !important;
+        color: white;
+    }
+
+    #noRequests {
+        font-weight: bold;
+        color: black !important;
+    }
+}

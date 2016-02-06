@@ -1,5 +1,6 @@
 ﻿namespace production_project.Web.Controllers.BookingRequests
 {
+    using System.Linq;
     using System.Web.Http;
     using production_project.Domain.BookingRequests;
     using production_project.Domain.BookingRequests.Dto;
@@ -26,6 +27,20 @@
             if (result == null)
             {
                 return NotFound();
+            }
+
+            return Ok(result);
+        }
+
+        [Route("bookings"), HttpGet]
+        public IHttpActionResult GetAllBookingRequests()
+        {
+            var currentUserId = _currentUserProvider.CurrentUserDetail.UserId;
+            var result = _bookingRequestRepository.GetAll(currentUserId);
+      
+            if (!result.Any())
+            {
+                return BadRequest();
             }
 
             return Ok(result);
