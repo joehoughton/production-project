@@ -17,6 +17,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{A6E85C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "production-project.Database", "production-project.Database\production-project.Database.csproj", "{F5176C1F-8A68-48C4-BDE0-98E0B2AB44D5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{246CFCAA-7B82-4069-83AA-F40F64769631}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "production-project.Domain.Tests", "production-project.Domain.Tests\production-project.Domain.Tests.csproj", "{EE8D5BC4-E5E1-4DA9-91D3-EB4A3A933334}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SpecflowTests", "SpecflowTests", "{2E32F1D9-3C0A-41F6-8FB7-0FC9048C337E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "production-project.Web.Specs", "production-project.Web.Specs\production-project.Web.Specs.csproj", "{2E4587EE-38A2-493A-B437-1B38CACAE7D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,8 +43,20 @@ Global
 		{F5176C1F-8A68-48C4-BDE0-98E0B2AB44D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5176C1F-8A68-48C4-BDE0-98E0B2AB44D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5176C1F-8A68-48C4-BDE0-98E0B2AB44D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE8D5BC4-E5E1-4DA9-91D3-EB4A3A933334}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE8D5BC4-E5E1-4DA9-91D3-EB4A3A933334}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE8D5BC4-E5E1-4DA9-91D3-EB4A3A933334}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE8D5BC4-E5E1-4DA9-91D3-EB4A3A933334}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E4587EE-38A2-493A-B437-1B38CACAE7D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E4587EE-38A2-493A-B437-1B38CACAE7D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E4587EE-38A2-493A-B437-1B38CACAE7D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E4587EE-38A2-493A-B437-1B38CACAE7D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EE8D5BC4-E5E1-4DA9-91D3-EB4A3A933334} = {246CFCAA-7B82-4069-83AA-F40F64769631}
+		{2E4587EE-38A2-493A-B437-1B38CACAE7D8} = {2E32F1D9-3C0A-41F6-8FB7-0FC9048C337E}
 	EndGlobalSection
 EndGlobal

@@ -2,7 +2,6 @@
 {
     using System.Net;
     using System.Web.Http;
-
     using production_project.Domain.Users;
     using production_project.Domain.Users.Dto;
 
