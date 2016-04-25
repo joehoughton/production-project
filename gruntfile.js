@@ -95,6 +95,16 @@ module.exports = function(grunt) {
 				]
 			  }
 		},
+        minifyHtml: {
+            options: {
+                cdata: true
+            },
+            dist: {
+                files: {
+                    'production-project.Web/Index.Min.html': 'production-project.Web/Index.html'
+                }
+            }
+        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-sass');
@@ -103,7 +113,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-jscs');
 	grunt.loadNpmTasks('grunt-bower-task');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-minify-html');
 	
-    grunt.registerTask('build', ['bower:install', 'copy', 'sass:dist', 'jshint:dist', 'jscs:dist']); // run grunt build from command line - production
+    grunt.registerTask('build', ['bower:install', 'copy', 'sass:dist', 'jshint:dist', 'jscs:dist', 'minifyHtml']); // run grunt build from command line - production
     grunt.registerTask('default', ['sass:dev', 'watch', 'jshint:dev', 'jscs:dev']); // run grunt from command line - development
 };
