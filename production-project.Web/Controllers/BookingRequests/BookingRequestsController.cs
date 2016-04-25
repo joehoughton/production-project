@@ -37,11 +37,6 @@
         {
             var currentUserId = _currentUserProvider.CurrentUserDetail.UserId;
             var result = _bookingRequestRepository.GetAll(currentUserId);
-      
-            if (!result.Any())
-            {
-                return BadRequest();
-            }
 
             return Ok(result);
         }
